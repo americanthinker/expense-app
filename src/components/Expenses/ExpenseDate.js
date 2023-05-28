@@ -1,9 +1,11 @@
-import './ExpenseDate.css'
+import './ExpenseDate.css';
+import ParseDate from './ParseDate';
 
 function ExpenseDate(props) {
-    const month = props.date.toLocaleString('en-US', {month: 'long'});
-    const year = props.date.getFullYear();
-    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    // const month = props.date.toLocaleString('en-US', {month: 'long'});
+    // const year = props.date.getFullYear();
+    // const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const {month, year, day} = ParseDate(props.date);
     return (
         <div className="expense-date">
             <div className="expense-date__day">{day}</div>
